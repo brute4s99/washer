@@ -2,25 +2,25 @@ cmake_minimum_required(VERSION 3.0.0) # Interface libraries require v3
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
 
-option(BUILD_TESTING "Build test suite" ON)
+option(BUILD_TESTING "Build test suite" OFF)
 option(BUILD_DOCS "Build documentation if Doxygen is available" ON)
 
 # Package management ###########################################################
 
-include(HunterGate)
+#include(HunterGate)
 
-HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.8.6.tar.gz"
-    SHA1 "774c45b3943d09386705854101bf5bbd4ce88419"
-)
+#HunterGate(
+#    URL "https://github.com/ruslo/hunter/archive/v0.8.6.tar.gz"
+#    SHA1 "774c45b3943d09386705854101bf5bbd4ce88419"
+#)
 
 project(washer VERSION 0.1.2)
 
-hunter_add_package(Comet)
-hunter_add_package(Boost COMPONENTS filesystem system thread date_time)
-if(BUILD_TESTING)
-  hunter_add_package(Boost COMPONENTS test)
-endif()
+find_package(Comet)
+find_package(Boost COMPONENTS filesystem system thread date_time)
+#if(BUILD_TESTING)
+#  hunter_add_package(Boost COMPONENTS test)
+#endif()
 
 ################################################################################
 
@@ -161,10 +161,10 @@ install(
 
 # Tests
 
-if(BUILD_TESTING)
-  enable_testing()
-  add_subdirectory(test)
-endif()
+#if(BUILD_TESTING)
+#  enable_testing()
+#  add_subdirectory(test)
+#endif()
 
 # Docs
 
