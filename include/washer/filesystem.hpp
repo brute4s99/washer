@@ -42,7 +42,7 @@
 #include <boost/exception/errinfo_api_function.hpp> // errinfo_api_function
 #include <boost/numeric/conversion/cast.hpp>  // numeric_cast
 #include <boost/filesystem/path.hpp> // basic_path
-#include <boost/system/system_error.hpp> // system_error, get_system_category
+#include <boost/system/system_error.hpp> // system_error, system_category
 #include <boost/throw_exception.hpp> // BOOST_THROW_EXCEPTION
 #include <boost/uuid/uuid_generators.hpp> // uuid, random_generator
 #include <boost/uuid/uuid_io.hpp> // uuid <<
